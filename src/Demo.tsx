@@ -212,8 +212,8 @@ export default function Demo() {
       <nav className="border-b border-gray-800 flex-shrink-0">
         <div className="flex items-center h-12 px-4 gap-3">
           <Link to="/" className="flex items-center gap-2 mr-2">
-            <img src="/supafleet-icon.png" className="h-6 w-6" alt="" />
-            <span className="font-serif text-sm tracking-tight">Supafleet</span>
+            <img src="/supafleet-icon.png" className="h-8 w-8 rounded-lg" alt="" />
+            <span className="font-serif text-base tracking-tight">Supafleet</span>
           </Link>
           <span className="text-xs text-gray-600 border border-gray-800 px-2 py-0.5 rounded">Demo</span>
           <div className="ml-auto flex items-center gap-2">

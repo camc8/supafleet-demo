@@ -18,8 +18,8 @@ export default function Landing() {
       <nav className="border-b border-gray-100 sticky top-0 bg-white/90 backdrop-blur-sm z-10">
         <div className="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
           <div className="flex items-center gap-2.5">
-            <img src="/supafleet-icon.png" className="h-6 w-6" alt="" />
-            <span className="font-serif text-base tracking-tight">Supafleet</span>
+            <img src="/supafleet-icon.png" className="h-8 w-8 rounded-lg" alt="" />
+            <span className="font-serif text-lg tracking-tight">Supafleet</span>
           </div>
           <div className="flex items-center gap-3">
             <a
@@ -42,7 +42,7 @@ export default function Landing() {
 
       {/* Hero */}
       <section className="max-w-5xl mx-auto px-6 pt-24 pb-20 text-center">
-        <img src="/supafleet-logo.png" className="h-20 w-20 mx-auto mb-8 rounded-2xl" alt="Supafleet" />
+        <img src="/supafleet-logo.png" className="h-28 w-28 mx-auto mb-8 rounded-2xl" alt="Supafleet" />
         <h1 className="font-serif text-5xl sm:text-6xl tracking-tight text-gray-900 mb-5">
           Self-hosted Supabase,<br className="hidden sm:block" /> at scale
         </h1>
@@ -167,7 +167,7 @@ export default function Landing() {
       <footer className="border-t border-gray-100 py-8">
         <div className="max-w-5xl mx-auto px-6 flex items-center justify-between text-xs text-gray-400">
           <div className="flex items-center gap-2">
-            <img src="/supafleet-icon.png" className="h-4 w-4" alt="" />
+            <img src="/supafleet-icon.png" className="h-5 w-5 rounded" alt="" />
             <span>Supafleet — MIT License</span>
           </div>
           <div className="flex items-center gap-4">
