@@ -81,11 +81,13 @@ export default function Landing() {
       {/* Dashboard preview */}
       <section className="max-w-5xl mx-auto px-6 pb-20">
         <div className="rounded-xl border border-gray-200 overflow-hidden shadow-sm">
-          <div className="bg-gray-50 border-b border-gray-100 px-4 py-3 flex items-center gap-2">
-            <div className="w-3 h-3 rounded-full bg-gray-300" />
-            <div className="w-3 h-3 rounded-full bg-gray-300" />
-            <div className="w-3 h-3 rounded-full bg-gray-300" />
-            <div className="ml-3 flex-1 bg-white border border-gray-200 rounded text-xs text-gray-400 px-3 py-1 text-center max-w-xs mx-auto">
+          <div className="bg-gray-50 border-b border-gray-100 px-4 py-3 relative flex items-center">
+            <div className="flex items-center gap-2">
+              <div className="w-3 h-3 rounded-full bg-gray-300" />
+              <div className="w-3 h-3 rounded-full bg-gray-300" />
+              <div className="w-3 h-3 rounded-full bg-gray-300" />
+            </div>
+            <div className="absolute left-1/2 -translate-x-1/2 bg-white border border-gray-200 rounded text-xs text-gray-400 px-3 py-1 w-52 text-center">
               manage.db.yourdomain.com
             </div>
           </div>
