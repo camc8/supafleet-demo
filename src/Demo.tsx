@@ -213,7 +213,7 @@ export default function Demo() {
         <div className="flex items-center h-12 px-4 gap-3">
           <Link to="/" className="flex items-center gap-2 mr-2">
             <img src="/supafleet-icon.png" className="h-8 w-8 rounded-lg" alt="" />
-            <span className="font-serif text-base tracking-tight">Supafleet</span>
+            <span className="text-base font-semibold tracking-tight">Supafleet</span>
           </Link>
           <span className="text-xs text-gray-600 border border-gray-800 px-2 py-0.5 rounded">Demo</span>
           <div className="ml-auto flex items-center gap-2">
