@@ -100,25 +100,13 @@ export default function Landing() {
               manage.db.yourdomain.com
             </div>
           </div>
-          <div className="bg-gray-950 text-white p-4 sm:p-6 min-h-48 sm:min-h-56 flex items-center justify-center">
-            <Link to="/demo" className="flex flex-col items-center gap-4 group w-full">
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 w-full max-w-lg">
-                {['production', 'staging', 'dev-01'].map((name) => (
-                  <div key={name} className="bg-gray-800 border border-gray-700 rounded-lg p-4 text-left">
-                    <div className="flex items-center gap-2 mb-3">
-                      <div className="w-2 h-2 rounded-full bg-green-400" />
-                      <span className="text-xs text-gray-300 font-mono">{name}</span>
-                    </div>
-                    <div className="space-y-1.5">
-                      <div className="text-xs text-gray-500">CPU <span className="text-gray-300">{name === 'production' ? '14%' : name === 'staging' ? '4%' : '1%'}</span></div>
-                      <div className="text-xs text-gray-500">Memory <span className="text-gray-300">{name === 'production' ? '1.8 GB' : name === 'staging' ? '1.2 GB' : '0.9 GB'}</span></div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-              <span className="text-sm text-gray-400 group-hover:text-white transition-colors">
-                Open interactive demo →
-              </span>
+          <div className="bg-gray-950 relative">
+            <img src="/demo.gif" alt="Supafleet dashboard demo" className="w-full block" />
+            <Link
+              to="/demo"
+              className="absolute bottom-4 right-4 text-xs bg-gray-800/80 hover:bg-gray-700 text-gray-300 hover:text-white px-3 py-1.5 rounded-md backdrop-blur-sm transition-colors"
+            >
+              Open interactive demo →
             </Link>
           </div>
         </div>
