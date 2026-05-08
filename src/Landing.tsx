@@ -144,13 +144,16 @@ export default function Landing() {
           </div>
           <div className="grid sm:grid-cols-3 gap-4 max-w-3xl mx-auto">
             {[
-              { label: 'Hetzner CX22', specs: '2 vCPU · 4 GB RAM · ~$6/mo', instances: '1–2 instances' },
-              { label: 'Hetzner CX32', specs: '4 vCPU · 8 GB RAM · ~$11/mo', instances: '3–5 instances', highlighted: true },
-              { label: 'Hetzner CX42', specs: '8 vCPU · 16 GB RAM · ~$22/mo', instances: '6–10 instances' },
+              { label: 'Hetzner CX22', specs: '2 vCPU · 4 GB RAM · ~$6/mo', instances: '1–2 instances', href: 'https://www.hetzner.com/cloud/?utm_source=supafleet#pricing' },
+              { label: 'Hetzner CX32', specs: '4 vCPU · 8 GB RAM · ~$11/mo', instances: '3–5 instances', highlighted: true, href: 'https://www.hetzner.com/cloud/?utm_source=supafleet#pricing' },
+              { label: 'Hetzner CX42', specs: '8 vCPU · 16 GB RAM · ~$22/mo', instances: '6–10 instances', href: 'https://www.hetzner.com/cloud/?utm_source=supafleet#pricing' },
             ].map((s) => (
-              <div
+              <a
                 key={s.label}
-                className={`rounded-xl p-5 border bg-white ${s.highlighted ? 'border-gray-900 shadow-sm' : 'border-gray-200'}`}
+                href={s.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`block rounded-xl p-5 border bg-white hover:shadow-md transition-all ${s.highlighted ? 'border-gray-900 shadow-sm' : 'border-gray-200 hover:border-gray-400'}`}
               >
                 {s.highlighted && (
                   <div className="text-xs font-semibold text-gray-900 mb-2 uppercase tracking-wide">Recommended</div>
@@ -158,7 +161,7 @@ export default function Landing() {
                 <div className="text-sm font-semibold text-gray-900 mb-1">{s.label}</div>
                 <div className="text-xs text-gray-500 mb-3">{s.specs}</div>
                 <div className="text-xs font-medium text-gray-700">{s.instances}</div>
-              </div>
+              </a>
             ))}
           </div>
         </div>
