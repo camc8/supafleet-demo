@@ -144,9 +144,9 @@ export default function Landing() {
           </div>
           <div className="grid sm:grid-cols-3 gap-4 max-w-3xl mx-auto">
             {[
-              { label: 'Hetzner CX22', specs: '2 vCPU · 4 GB RAM · €5/mo', instances: '1–2 instances' },
-              { label: 'Hetzner CX32', specs: '4 vCPU · 8 GB RAM · €9/mo', instances: '3–5 instances', highlighted: true },
-              { label: 'Hetzner CX42', specs: '8 vCPU · 16 GB RAM · €19/mo', instances: '6–10 instances' },
+              { label: 'Hetzner CX22', specs: '2 vCPU · 4 GB RAM · ~$6/mo', instances: '1–2 instances' },
+              { label: 'Hetzner CX32', specs: '4 vCPU · 8 GB RAM · ~$11/mo', instances: '3–5 instances', highlighted: true },
+              { label: 'Hetzner CX42', specs: '8 vCPU · 16 GB RAM · ~$22/mo', instances: '6–10 instances' },
             ].map((s) => (
               <div
                 key={s.label}
