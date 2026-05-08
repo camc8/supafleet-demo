@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { LayoutDashboard, Globe, ShieldCheck, Sliders, ScrollText, BarChart2, Terminal, Code2 } from 'lucide-react'
+import { LayoutDashboard, Globe, ShieldCheck, Sliders, ScrollText, BarChart2, Terminal, Code2, User } from 'lucide-react'
 
 function GithubIcon({ className }: { className?: string }) {
   return (
@@ -37,7 +37,7 @@ export default function Landing() {
               rel="noopener noreferrer"
               className="hidden sm:flex items-center gap-1.5 text-sm text-gray-500 hover:text-gray-900 transition-colors"
             >
-              <Globe className="w-3.5 h-3.5" strokeWidth={1.75} />
+              <User className="w-3.5 h-3.5" strokeWidth={1.75} />
               camc8.com
             </a>
             <a
