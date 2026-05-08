@@ -25,12 +25,20 @@ export default function Landing() {
     <div className="min-h-screen bg-white text-gray-900 font-sans">
       {/* Nav */}
       <nav className="border-b border-gray-100 sticky top-0 bg-white/90 backdrop-blur-sm z-10">
-        <div className="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
           <div className="flex items-center gap-2.5">
-            <img src="/supafleet-icon.png" className="h-8 w-8 rounded-lg" alt="" />
+            <img src="/supafleet-icon.png" className="h-8 w-8 rounded-lg" alt="Supafleet" />
             <span className="text-lg font-semibold tracking-tight">Supafleet</span>
           </div>
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 sm:gap-3">
+            <a
+              href="https://camc8.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden sm:block text-sm text-gray-500 hover:text-gray-900 transition-colors"
+            >
+              camc8.com
+            </a>
             <a
               href="https://github.com/camc8/supafleet"
               target="_blank"
@@ -38,11 +46,11 @@ export default function Landing() {
               className="flex items-center gap-1.5 text-sm text-gray-500 hover:text-gray-900 transition-colors"
             >
               <GithubIcon className="w-4 h-4" />
-              GitHub
+              <span className="hidden sm:inline">GitHub</span>
             </a>
             <Link
               to="/demo"
-              className="text-sm bg-gray-900 text-white px-3.5 py-1.5 rounded-md hover:bg-gray-700 transition-colors"
+              className="text-sm bg-gray-900 text-white px-3 sm:px-3.5 py-1.5 rounded-md hover:bg-gray-700 transition-colors"
             >
               Live demo
             </Link>
@@ -51,13 +59,13 @@ export default function Landing() {
       </nav>
 
       {/* Hero */}
-      <section className="max-w-5xl mx-auto px-6 pt-24 pb-20 text-center">
-        <img src="/supafleet-logo.png" className="h-28 w-28 mx-auto mb-8 rounded-2xl" alt="Supafleet" />
-        <h1 className="font-serif text-5xl sm:text-6xl tracking-tight text-gray-900 mb-5">
+      <section className="max-w-5xl mx-auto px-4 sm:px-6 pt-16 sm:pt-24 pb-16 sm:pb-20 text-center">
+        <img src="/supafleet-logo.png" className="h-20 w-20 sm:h-28 sm:w-28 mx-auto mb-6 sm:mb-8 rounded-2xl" alt="Supafleet logo" />
+        <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl tracking-tight text-gray-900 mb-4 sm:mb-5">
           Self-hosted Supabase,<br className="hidden sm:block" /> at scale
         </h1>
-        <p className="text-lg text-gray-500 max-w-xl mx-auto mb-10 leading-relaxed">
-          Manage multiple isolated Supabase instances from a single dashboard — on your own VPS, your own domain, your own rules.
+        <p className="text-base sm:text-lg text-gray-500 max-w-xl mx-auto mb-8 sm:mb-10 leading-relaxed">
+          Run and manage multiple isolated Supabase instances from a single dashboard — on your own VPS, your own domain, zero vendor lock-in.
         </p>
         <div className="flex items-center justify-center gap-3 flex-wrap">
           <Link
@@ -79,7 +87,7 @@ export default function Landing() {
       </section>
 
       {/* Dashboard preview */}
-      <section className="max-w-5xl mx-auto px-6 pb-20">
+      <section className="max-w-5xl mx-auto px-4 sm:px-6 pb-16 sm:pb-20">
         <div className="rounded-xl border border-gray-200 overflow-hidden shadow-sm">
           <div className="bg-gray-50 border-b border-gray-100 px-4 py-3 relative flex items-center">
             <div className="flex items-center gap-2">
@@ -87,15 +95,15 @@ export default function Landing() {
               <div className="w-3 h-3 rounded-full bg-gray-300" />
               <div className="w-3 h-3 rounded-full bg-gray-300" />
             </div>
-            <div className="absolute left-1/2 -translate-x-1/2 bg-white border border-gray-200 rounded text-xs text-gray-400 px-3 py-1 w-52 text-center">
+            <div className="absolute left-1/2 -translate-x-1/2 bg-white border border-gray-200 rounded text-xs text-gray-400 px-3 py-1 w-44 sm:w-52 text-center truncate">
               manage.db.yourdomain.com
             </div>
           </div>
-          <div className="bg-gray-950 text-white p-6 min-h-56 flex items-center justify-center">
-            <Link to="/demo" className="flex flex-col items-center gap-4 group">
-              <div className="grid grid-cols-3 gap-3">
+          <div className="bg-gray-950 text-white p-4 sm:p-6 min-h-48 sm:min-h-56 flex items-center justify-center">
+            <Link to="/demo" className="flex flex-col items-center gap-4 group w-full">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 w-full max-w-lg">
                 {['production', 'staging', 'dev-01'].map((name) => (
-                  <div key={name} className="bg-gray-800 border border-gray-700 rounded-lg p-4 text-left w-44">
+                  <div key={name} className="bg-gray-800 border border-gray-700 rounded-lg p-4 text-left">
                     <div className="flex items-center gap-2 mb-3">
                       <div className="w-2 h-2 rounded-full bg-green-400" />
                       <span className="text-xs text-gray-300 font-mono">{name}</span>
@@ -116,7 +124,7 @@ export default function Landing() {
       </section>
 
       {/* Features */}
-      <section className="max-w-5xl mx-auto px-6 pb-24">
+      <section className="max-w-5xl mx-auto px-4 sm:px-6 pb-16 sm:pb-24">
         <div className="text-center mb-12">
           <h2 className="text-2xl font-serif text-gray-900 mb-3">Everything you need</h2>
           <p className="text-sm text-gray-500">Built for developers who want full control without the ops overhead.</p>
@@ -138,8 +146,8 @@ export default function Landing() {
       </section>
 
       {/* Server rec */}
-      <section className="bg-gray-50 border-t border-gray-100 py-20">
-        <div className="max-w-5xl mx-auto px-6">
+      <section className="bg-gray-50 border-t border-gray-100 py-14 sm:py-20">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-10">
             <h2 className="text-2xl font-serif text-gray-900 mb-3">Recommended server specs</h2>
             <p className="text-sm text-gray-500">Each Supabase instance runs ~10 Docker containers</p>
@@ -170,13 +178,13 @@ export default function Landing() {
       </section>
 
       {/* CTA */}
-      <section className="py-20">
-        <div className="max-w-5xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-serif text-gray-900 mb-3">Get started in minutes</h2>
-          <p className="text-gray-500 mb-8 text-sm">One command. Works on any Ubuntu/Debian VPS.</p>
-          <div className="bg-gray-950 text-gray-100 rounded-xl p-4 font-mono text-sm max-w-xl mx-auto text-left mb-8 flex items-center gap-3">
-            <span className="text-gray-600 select-none">$</span>
-            <span className="text-gray-200">curl -fsSL https://raw.githubusercontent.com/camc8/supafleet/main/setup.sh | bash</span>
+      <section className="py-14 sm:py-20">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 text-center">
+          <h2 className="text-2xl sm:text-3xl font-serif text-gray-900 mb-3">Self-host Supabase in minutes</h2>
+          <p className="text-gray-500 mb-8 text-sm">One command. Works on any Ubuntu/Debian VPS. No SaaS dependency.</p>
+          <div className="bg-gray-950 text-gray-100 rounded-xl p-4 font-mono text-xs sm:text-sm max-w-xl mx-auto text-left mb-8 flex items-start gap-3 overflow-x-auto">
+            <span className="text-gray-600 select-none shrink-0 mt-0.5">$</span>
+            <span className="text-gray-200 break-all sm:break-normal">curl -fsSL https://raw.githubusercontent.com/camc8/supafleet/main/setup.sh | bash</span>
           </div>
           <a
             href="https://github.com/camc8/supafleet"
@@ -192,12 +200,13 @@ export default function Landing() {
 
       {/* Footer */}
       <footer className="border-t border-gray-100 py-8">
-        <div className="max-w-5xl mx-auto px-6 flex items-center justify-between text-xs text-gray-400">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center gap-4 sm:gap-0 sm:justify-between text-xs text-gray-400">
           <div className="flex items-center gap-2">
             <img src="/supafleet-icon.png" className="h-5 w-5 rounded" alt="" />
             <span>Supafleet — MIT License</span>
           </div>
           <div className="flex items-center gap-4">
+            <a href="https://camc8.com" target="_blank" rel="noopener noreferrer" className="hover:text-gray-900 transition-colors">camc8.com</a>
             <a href="https://github.com/camc8/supafleet" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 hover:text-gray-900 transition-colors">
               <GithubIcon className="w-3.5 h-3.5" />
               GitHub
