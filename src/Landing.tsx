@@ -30,13 +30,14 @@ export default function Landing() {
             <img src="/supafleet-icon.png" className="h-8 w-8 rounded-lg" alt="Supafleet" />
             <span className="text-lg font-semibold tracking-tight">Supafleet</span>
           </div>
-          <div className="flex items-center gap-2 sm:gap-3">
+          <div className="flex items-center gap-4 sm:gap-5">
             <a
               href="https://camc8.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden sm:block text-sm text-gray-500 hover:text-gray-900 transition-colors"
+              className="hidden sm:flex items-center gap-1.5 text-sm text-gray-500 hover:text-gray-900 transition-colors"
             >
+              <Globe className="w-3.5 h-3.5" strokeWidth={1.75} />
               camc8.com
             </a>
             <a
